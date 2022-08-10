@@ -28,7 +28,7 @@ Dito isso, é dessa forma que alteramos a sintaxe não só para o ``LEFT`` ou ``
 > *Tá, mas por que eu utilizaria outro tipo de ``JOIN`` se o ``INNER`` já satisfaz as minhas necessidades?*  
 > Será mesmo . . . ?
 
-Digamos que você tenha duas tabelas: uma com Personagems e outra que armazena o tipo dos personagens (principal, secundário, etc). Se você quiser retornar **TODOS** os tipos armazenados e trazer também os personagens que estão relacionados com esse tipo, como faria?  
+Digamos que você tenha duas tabelas: uma com Personagens e outra que armazena o tipo dos personagens (principal, secundário, etc). Se você quiser retornar **TODOS** os tipos armazenados e trazer também os personagens que estão relacionados com esse tipo, como faria?  
 
 ![Personagem Table](../images/PERSONAGEM_TABLE.png)
 ![Tipo Table](../images/TIPO_TABLE.png)
@@ -43,7 +43,7 @@ Para solucionar esse tipo de desafio, utilizamos o recurso do ``LEFT`` ou ``RIGH
 
 ![Resultado do Inner Join entre tipo e personagem](../images/PERSON_TIPO_LEFT_JOIN_RESULT.png)  
 
-Desta forma, mesmo não havendo nenhum personagem com aquele tipo, a *query* retorna **TODOS** os valores da tabela tipo. E os que não possui correspondência, é preenchido com *null* (nulo).
+Desta forma, mesmo não havendo nenhum personagem com aquele tipo, a *query* retorna **TODOS** os valores da tabela tipo. E os que não possuem correspondência, é preenchido com *null* (nulo).
 
 Portanto, de agora em diante, caso queiramos trazer todos os dados de uma tabela específica, acoplada a outra tabela, basta usar o ``LEFT`` ou ``RIGHT JOIN``!   
 
