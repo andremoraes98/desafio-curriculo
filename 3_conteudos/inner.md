@@ -16,7 +16,7 @@ Mas também é possível apelidas as tabelas, utilizando um **as** (alias). Dess
 > **INNER JOIN** tabela2 as *t2*  
 > **ON** t1.coluna-chave-estrangeira = t2.coluna-referencia  
 >
->  > Vale ressaltar que é possível colocar quantas colunas quantas fizerem sentido após o SELECT. No entanto, o MySQL trará os dados da tabela explicitada antes do nome da coluna.  
+>  > Vale ressaltar que é possível colocar quantas colunas fizerem sentido após o SELECT. No entanto, o MySQL trará os dados da tabela explicitada antes do nome da coluna.  
 >  >Por exemplo: caso haja uma coluna **name** na tabela1 e na tabela2, o MySQL trará os dados da tabela que foi explicitada antes do nome da coluna.
 
 Agora, que tal trazer um exemplo para clarear o que foi falado? Vamos juntos?!
@@ -29,7 +29,7 @@ O primeiro passo é selecionarmos as colunas que queremos da primeira tabela, se
 
 Quando conseguirmos trazer o resultado da *query*, sem erros, vamos ao segundo passo.
 
-Agora vamos acoplar a tabela principal que contém a foreign key à tabela secundária, que contém os dados que queremos acoplar. Para isso, vamos apenas acrescentar o ``INNER JOIN`` e o ``ON``, como mostra a foto:
+Agora vamos acoplar a tabela principal que contém a foreign key à tabela secundária, que contém os dados que queremos acoplar. Para isso, vamos apenas acrescentar o ``INNER JOIN`` e o ``ON``, como mostra a imagem abaixo:
 
 ![Second Step](../images/SECOND_INNER_JOIN.png)
 
@@ -53,4 +53,4 @@ Fala sério! Isso não é incrível?
 
 ![Fourth Step](../images/FOURTH_INNER_JOIN.png)
 
-### Explorado o ``INNER JOIN``, vamos agora falar um pouco do ``LEFT JOIN`` e ``RIGTH JOIN``. Pra cima!!! 🚀🚀🚀
+### Explorado o ``INNER JOIN``, vamos agora falar um pouco do ``LEFT JOIN`` e ``RIGHT JOIN``. Pra cima!!! 🚀🚀🚀

@@ -6,6 +6,6 @@ Agora que já aprendemos a instalar o MySQL Server, a manipular e criar algumas 
 
 **MEME PENSATIVO**
 
-É exatamente aí que o ``JOIN`` entra! Ele é o responsável de *acoplar* os valores de uma tabela User (Usuário) com os valores de uma tabela Addres (Endereço) e trazer os dois valores em uma só tabela!  
+É exatamente aí que o ``JOIN`` entra! Ele é o responsável por *acoplar* os valores de duas tabelas distintas e trazer os dois valores em uma só tabela!  
 
-Aprenderemos também a manipular os valores ligados através das foreign keys do nosso banco de dados da melhor forma possível, utilizando o poder do ``JOIN``!  
+Aprenderemos também a manipular os valores ligados através das *foreign keys* do nosso banco de dados da melhor forma possível, utilizando o poder do ``JOIN``!  
