@@ -1,0 +1,50 @@
+## LEFT JOIN e RIGHT JOIN 
+
+Compreendido o conceito de ``INNER JOIN``, vamos tratar agora outros dois tipos de ``JOINs``: o ``LEFT`` e o ``RIGHT``.
+
+A sintaxe é padrão. Então, como você deve estar imaginando, a única coisa que muda é, de fato, o tipo de ``JOIN`` que estamos chamando. Tomando o nosso último caso como exemplo:
+
+> SELECT *t1.nome-coluna, t2.nome-coluna, . . .*  
+> FROM tabela1 as *t1*  
+> **INNER JOIN** tabela2 as *t2*  
+> **ON** t1.coluna-chave-estrangeira = t2.coluna-referencia
+
+Caso quiséssemos alterar o tipo de ``JOIN``, basta somente alterar o ``INNER`` por ``LEFT`` ou ``RIGHT``, ficando assim:
+
+> SELECT *t1.nome-coluna, t2.nome-coluna, . . .*  
+> FROM tabela1 as *t1*  
+> **LEFT** JOIN tabela2 as *t2*  
+> ON t1.coluna-chave-estrangeira = t2.coluna-referencia
+>
+> > Ou
+>
+> SELECT *t1.nome-coluna, t2.nome-coluna, . . .*  
+> FROM tabela1 as *t1*  
+> **RIGHT** JOIN tabela2 as *t2*  
+> ON t1.coluna-chave-estrangeira = t2.coluna-referencia
+
+Dito isso, é dessa forma que alteramos a sintaxe não só para o ``LEFT`` ou ``RIGHT JOIN`` como também para qualquer outro tipo de ``JOIN``!
+
+> *Tá, mas por que eu utilizaria outro tipo de ``JOIN`` se o ``INNER`` já satisfaz as minhas necessidades?*  
+> Será mesmo . . . ?
+
+Digamos que você tenha duas tabelas: uma com Personagems e outra que armazena o tipo dos personagens (principal, secundário, etc). Se você quiser retornar **TODOS** os tipos armazenados e trazer também os personagens que estão relacionados com esse tipo, como faria?  
+
+![Personagem Table](../images/PERSONAGEM_TABLE.png)
+![Tipo Table](../images/TIPO_TABLE.png)
+
+Provavelmente, com o que falamos até aqui, desta forma:  
+
+![Resultado do Inner Join entre tipo e personagem](../images/PERSON_TIPO_INNER_JOIN_RESULT.png)  
+
+No entanto, há uma correspondência que não foi trazida pelo ``JOIN``, na tabela tipo, que é o tipo *'Secundário'*... ***E agora?!*** 🤔  
+
+Para solucionar esse tipo de demanda, utilizamos o recurso do ``LEFT`` ou ``RIGHT JOIN``, a depender de qual tabela é tida como referência. Observemos o mesmo exemplo, mas agora trocando o ``INNER`` pelo ``LEFT``:  
+
+![Resultado do Inner Join entre tipo e personagem](../images/PERSON_TIPO_LEFT_JOIN_RESULT.png)  
+
+Desta forma, mesmo não havendo nenhum personagem com aquele tipo, a *query* retorna **TODOS** os valores da tabela tipo. E os que não possui correspondência, é preenchido com *null* (nulo).
+
+Portanto, de agora em diante, caso queiramos trazer todos os dados de uma tabela específica, basta usar o ``LEFT`` ou ``RIGHT JOIN``!   
+ 
+>Se a tabela principal for a nossa referência, utilizamos o ``LEFT JOIN``. Se for a tabela secundária (que vem após instanciarmos o ``JOIN``), utilizamos o ``RIGHT JOIN``.
