@@ -37,14 +37,16 @@ Provavelmente, com o que falamos até aqui, desta forma:
 
 ![Resultado do Inner Join entre tipo e personagem](../images/PERSON_TIPO_INNER_JOIN_RESULT.png)  
 
-No entanto, há uma correspondência que não foi trazida pelo ``JOIN``, na tabela tipo, que é o tipo *'Secundário'*... ***E agora?!*** 🤔  
+No entanto, há um dado que não foi trazido pelo ``JOIN``, na tabela tipo, que é o valor *'Secundário'*... ***E agora?!*** 🤔  
 
-Para solucionar esse tipo de demanda, utilizamos o recurso do ``LEFT`` ou ``RIGHT JOIN``, a depender de qual tabela é tida como referência. Observemos o mesmo exemplo, mas agora trocando o ``INNER`` pelo ``LEFT``:  
+Para solucionar esse tipo de desafio, utilizamos o recurso do ``LEFT`` ou ``RIGHT JOIN``, a depender de qual tabela é tida como referência. Observemos o mesmo exemplo, mas agora trocando o ``INNER`` pelo ``LEFT``:  
 
 ![Resultado do Inner Join entre tipo e personagem](../images/PERSON_TIPO_LEFT_JOIN_RESULT.png)  
 
 Desta forma, mesmo não havendo nenhum personagem com aquele tipo, a *query* retorna **TODOS** os valores da tabela tipo. E os que não possui correspondência, é preenchido com *null* (nulo).
 
-Portanto, de agora em diante, caso queiramos trazer todos os dados de uma tabela específica, basta usar o ``LEFT`` ou ``RIGHT JOIN``!   
- 
+Portanto, de agora em diante, caso queiramos trazer todos os dados de uma tabela específica, acoplada a outra tabela, basta usar o ``LEFT`` ou ``RIGHT JOIN``!   
+
 >Se a tabela principal for a nossa referência, utilizamos o ``LEFT JOIN``. Se for a tabela secundária (que vem após instanciarmos o ``JOIN``), utilizamos o ``RIGHT JOIN``.
+
+### Agora, você possui o ``INNER``, ``LEFT`` e o ``RIGHT`` no canivete de ``JOINS``. Vamos também adicionar o ``SELF``?! 
