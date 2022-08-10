@@ -12,4 +12,4 @@ Para que o conteúdo fique ainda mais nítido e fixado, essa foto representa mui
 
 - Por último, caso os dados que queira filtrar estejam na mesma tabela, é o ~~``INNER``~~ ``SELF JOIN``!  
 
-### Agora que todo o conteúdo foi consumido, vamos para a aula ao vivo?! 🔴🎥
+#### Agora que todo o conteúdo foi consumido, vamos para a aula ao vivo?! 🔴🎥
