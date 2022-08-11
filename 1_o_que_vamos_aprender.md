@@ -4,7 +4,7 @@ Agora que já aprendemos a instalar o MySQL Server, a manipular e criar algumas 
 
 *Como será que eu faço para mesclar ou trazer dados de uma **OU MAIS** tabelas?* 🤔  
 
-**MEME PENSATIVO**
+![First Step](./images/THINKING_MEME.jpg)
 
 É exatamente aí que o ``JOIN`` entra! Ele é o responsável por *acoplar* os valores de duas tabelas distintas e trazer os dois valores em uma só tabela!  
 
